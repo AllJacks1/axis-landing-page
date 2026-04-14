@@ -1,5 +1,6 @@
 import AboutSection from "./components/AboutSection";
 import DifferentiationSection from "./components/DifferentiationSection";
+import FinalConversionSection from "./components/FinalConversionSection";
 import HeroSection from "./components/HeroSection";
 import NavigationBar from "./components/NavigationBar";
 import OfferSection from "./components/OfferSection";
@@ -22,6 +23,7 @@ function App() {
       <ProcessSection />
       <AboutSection />
       <DifferentiationSection/>
+      <FinalConversionSection/>
     </>
   );
 }

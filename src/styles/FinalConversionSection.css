@@ -1,0 +1,171 @@
+.final-conversion-section {
+  background: linear-gradient(
+    135deg,
+    var(--axis-black, #0a0a0a) 0%,
+    var(--axis-dark, #1a1a1a) 50%,
+    var(--axis-primary-dark, #36004f) 100%
+  );
+  padding: var(--space-3xl, 4rem) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative accent circles */
+.final-conversion-section::before {
+  content: "";
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  border: 60px solid var(--axis-primary, #4b006e);
+  border-radius: 50%;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.final-conversion-section::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(75, 0, 110, 0.15) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.final-conversion-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tagline */
+.final-conversion-tagline {
+  display: inline-block;
+  background: var(--axis-primary, #4b006e);
+  color: var(--axis-white, #ffffff);
+  padding: var(--space-sm, 0.5rem) var(--space-lg, 1.5rem);
+  font-family: var(--font-family, "Inter", system-ui, sans-serif);
+  font-weight: var(--font-weight-bold, 800);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: var(--radius-sm, 4px);
+  clip-path: polygon(0 0, 100% 0, 98% 100%, 2% 100%);
+  margin-bottom: var(--space-xl, 2rem);
+}
+
+/* Headline */
+.final-conversion-headline {
+  font-family: var(--font-family, "Inter", system-ui, sans-serif);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: var(--font-weight-bold, 800);
+  color: var(--color-text-inverse, #ffffff);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: var(--space-xl, 2rem);
+}
+
+.final-conversion-headline .text-accent {
+  color: var(--axis-primary-light, #7a1fb0);
+  background: linear-gradient(
+    135deg,
+    var(--axis-primary-light, #7a1fb0) 0%,
+    var(--axis-white, #ffffff) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Supporting Copy */
+.final-conversion-copy {
+  margin-bottom: var(--space-2xl, 3rem);
+}
+
+.final-conversion-copy p {
+  font-family: var(--font-family, "Inter", system-ui, sans-serif);
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  font-weight: var(--font-weight-medium, 500);
+  color: var(--axis-gray-300, #9ca3af);
+  line-height: 1.6;
+  margin: 0 0 var(--space-sm, 0.5rem) 0;
+}
+
+.final-conversion-copy p:last-child {
+  margin-bottom: 0;
+  color: var(--color-text-inverse, #ffffff);
+  font-weight: var(--font-weight-semibold, 600);
+}
+
+/* CTA Button */
+.final-conversion-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm, 0.5rem);
+  padding: var(--space-md, 1rem) var(--space-2xl, 3rem);
+  font-family: var(--font-family, "Inter", system-ui, sans-serif);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-semibold, 600);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-full, 9999px);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-base, 250ms ease);
+  background: var(--axis-white, #ffffff);
+  color: var(--axis-primary, #4b006e);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.final-conversion-cta:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.35);
+  background: var(--axis-gray-100, #f3f4f6);
+}
+
+/* Pulse animation for extra urgency */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.4);
+  }
+}
+
+.final-conversion-cta {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .final-conversion-section {
+    padding: var(--space-2xl, 3rem) 0;
+  }
+
+  .final-conversion-section::before,
+  .final-conversion-section::after {
+    display: none;
+  }
+
+  .final-conversion-cta {
+    width: 100%;
+    padding: var(--space-md, 1rem) var(--space-xl, 2rem);
+  }
+}

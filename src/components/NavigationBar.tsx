@@ -17,7 +17,14 @@ const NavigationBar: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const offset = 80; // Your header height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
   };
 
@@ -46,14 +53,14 @@ const NavigationBar: React.FC = () => {
                 Services
               </button>
             </li>
-            <li className="navbar__item">
+            {/* <li className="navbar__item">
               <button
                 className="navbar__link"
                 onClick={() => scrollToSection("case-studies")}
               >
                 Case Studies
               </button>
-            </li>
+            </li> */}
             <li className="navbar__item">
               <button
                 className="navbar__link"

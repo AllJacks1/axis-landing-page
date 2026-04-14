@@ -36,7 +36,7 @@ const services = [
 
 const ServicesSection: React.FC = () => {
   return (
-    <section className="services-section">
+    <section id="services" className="services-section">
       <div className="services-container">
         {/* Section Header */}
         <div className="services-header">

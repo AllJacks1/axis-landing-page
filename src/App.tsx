@@ -2,6 +2,7 @@ import AboutSection from "./components/AboutSection";
 import ContactSection from "./components/ContactSection";
 import DifferentiationSection from "./components/DifferentiationSection";
 import FinalConversionSection from "./components/FinalConversionSection";
+import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import NavigationBar from "./components/NavigationBar";
 import OfferSection from "./components/OfferSection";
@@ -26,6 +27,7 @@ function App() {
       <DifferentiationSection />
       <FinalConversionSection />
       <ContactSection />
+      <Footer />
     </>
   );
 }

@@ -21,7 +21,7 @@ const steps = [
 
 const ProcessSection: React.FC = () => {
   return (
-    <section className="process-section">
+    <section id="process" className="process-section">
       <div className="process-container">
         {/* Section Header */}
         <div className="process-header">

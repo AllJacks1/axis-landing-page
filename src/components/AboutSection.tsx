@@ -5,7 +5,7 @@ const beliefs = ["Clearer", "Stronger", "More visible", "More profitable"];
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="about-section">
+    <section id="about" className="about-section">
       <div className="about-container">
         {/* Left: Visual Element */}
         <div className="about-visual">

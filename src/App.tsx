@@ -1,6 +1,7 @@
 import HeroSection from "./components/HeroSection";
 import NavigationBar from "./components/NavigationBar";
 import ProblemSection from "./components/ProblemSection";
+import ProcessSection from "./components/ProcessSection";
 import ServicesSection from "./components/ServicesSection";
 import SolutionSection from "./components/SolutionSection";
 
@@ -14,6 +15,7 @@ function App() {
       <ProblemSection />
       <SolutionSection />
       <ServicesSection />
+      <ProcessSection/>
     </>
   );
 }

@@ -22,6 +22,8 @@
 /* Brand Column */
 .footer-brand {
   max-width: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-brand-name {
@@ -48,7 +50,47 @@
   font-size: 1rem;
   color: var(--axis-gray-300, #9ca3af);
   line-height: 1.7;
-  margin: 0;
+  margin: 0 0 var(--space-lg, 1.5rem) 0;
+}
+
+/* Social Media - Aligned with text */
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm, 0.5rem);
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #1877f2;
+  color: var(--axis-white);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.footer-social-link:hover {
+  background: var(--axis-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(75, 0, 110, 0.4);
+}
+
+.footer-social-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.footer-social-label {
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-medium, 500);
+  color: var(--axis-gray-500, #6b7280);
+  margin-left: var(--space-xs, 0.25rem);
 }
 
 /* Contact Column */
@@ -137,6 +179,10 @@
 
   .footer-brand {
     max-width: 100%;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
   }
 
   .footer-bottom {

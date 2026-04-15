@@ -8,6 +8,7 @@ import NavigationBar from "./components/NavigationBar";
 import OfferSection from "./components/OfferSection";
 import ProblemSection from "./components/ProblemSection";
 import ProcessSection from "./components/ProcessSection";
+import SalesCTA from "./components/SalesCTA";
 import ServicesSection from "./components/ServicesSection";
 import SolutionSection from "./components/SolutionSection";
 
@@ -20,6 +21,7 @@ function App() {
       <HeroSection />
       <ProblemSection />
       <SolutionSection />
+      <SalesCTA />
       <ServicesSection />
       <OfferSection />
       <ProcessSection />

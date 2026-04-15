@@ -2,19 +2,6 @@ import React from "react";
 import "../styles/SalesCTA.css";
 
 const SalesCTA: React.FC = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <section id="sales-cta" className="sales-cta-section">
       <div className="sales-cta-container">
@@ -26,10 +13,13 @@ const SalesCTA: React.FC = () => {
             We also help businesses build systems that close deals, not just
             generate leads.
           </p>
-          <button className="sales-cta-button" onClick={scrollToContact}>
+          <a
+            href="https://avarissalessolutions.vercel.app/"
+            className="sales-cta-button"
+          >
             <span>Check out Avaris Sales Solutions</span>
             <span className="sales-cta-arrow">👉</span>
-          </button>
+          </a>
         </div>
       </div>
     </section>

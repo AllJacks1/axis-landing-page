@@ -87,7 +87,7 @@
   font-family: var(--font-family);
   font-size: 1rem;
   font-weight: var(--font-weight-semibold);
-  border: none;
+  text-decoration: none; /* removes default link underline */
   border-radius: var(--radius-full);
   cursor: pointer;
   transition: all var(--transition-base);

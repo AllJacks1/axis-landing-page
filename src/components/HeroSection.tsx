@@ -35,7 +35,7 @@ const IhubLogo: React.FC = () => (
 );
 
 const AxialLogo: React.FC = () => (
-  <a href="https://facebook.com/axialmarketing" target="_blank">
+  <a href="https://facebook.com/AxialRES" target="_blank">
     <img
       src={axialLogo}
       alt="Axial Marketing"
@@ -45,7 +45,7 @@ const AxialLogo: React.FC = () => (
 );
 
 const AstriaLogo: React.FC = () => (
-  <a href="https://facebook.com/astriasolutions" target="_blank">
+  <a href="https://facebook.com/astria.insurance" target="_blank">
     <img
       src={astriaLogo}
       alt="Astria Solutions"

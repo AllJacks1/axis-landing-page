@@ -12,6 +12,9 @@ import ProcessSection from "./components/ProcessSection";
 import SalesCTA from "./components/SalesCTA";
 import ServicesSection from "./components/ServicesSection";
 import SolutionSection from "./components/SolutionSection";
+import { Route, Routes } from "react-router-dom";
+import Works from "./components/Works";
+import CaseStudies from "./components/CaseStudies";
 
 export default function App() {
   return (
@@ -46,20 +49,32 @@ export default function App() {
         {/* <meta property="og:url" content="https://your-axis-domain.com" /> */}
       </Helmet>
 
-      <NavigationBar />
-      <div style={{ height: "80px" }} />
-      <HeroSection />
-      <ProblemSection />
-      <SolutionSection />
-      <SalesCTA />
-      <ServicesSection />
-      <OfferSection />
-      <ProcessSection />
-      <AboutSection />
-      <DifferentiationSection />
-      <FinalConversionSection />
-      <ContactSection />
-      <Footer />
+      <Routes>
+        {/* Home / Landing Page */}
+        <Route
+          path="/"
+          element={
+            <>
+              <NavigationBar />
+              <div style={{ height: "80px" }} />
+              <HeroSection />
+              <ProblemSection />
+              <SolutionSection />
+              <SalesCTA />
+              <ServicesSection />
+              <OfferSection />
+              <ProcessSection />
+              <AboutSection />
+              <DifferentiationSection />
+              <FinalConversionSection />
+              <ContactSection />
+              <Footer />
+            </>
+          }
+        />
+        <Route path="/works" element={<Works />} />
+        <Route path="/case-studies" element={<CaseStudies />} />
+      </Routes>
     </>
   );
 }

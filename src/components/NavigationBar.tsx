@@ -80,6 +80,14 @@ const NavigationBar: React.FC = () => {
               <li className="navbar__item">
                 <button
                   className="navbar__link"
+                  onClick={() => window.location.href = "/case-studies"}
+                >
+                  Case Studies
+                </button>
+              </li>
+              <li className="navbar__item">
+                <button
+                  className="navbar__link"
                   onClick={() => scrollToSection("about")}
                 >
                   About

@@ -14,7 +14,10 @@ import ServicesSection from "./components/ServicesSection";
 import SolutionSection from "./components/SolutionSection";
 import { Route, Routes } from "react-router-dom";
 import Works from "./components/Works";
-import CaseStudies from "./components/CaseStudies";
+import CaseStudyPageIhub from "./components/CaseStudiesIhub";
+import CaseStudyPageJmave from "./components/CaseStudyJMave";
+import CaseStudiesHub from "./components/CaseStudies";
+import CaseStudyPageFitmd from "./components/CaseStudiesFitmd";
 
 export default function App() {
   return (
@@ -73,7 +76,46 @@ export default function App() {
           }
         />
         <Route path="/works" element={<Works />} />
-        <Route path="/case-studies" element={<CaseStudies />} />
+        <Route
+          path="/case-studies"
+          element={
+            <>
+              <NavigationBar />
+              <CaseStudiesHub />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/case-studies/ihub-davao"
+          element={
+            <>
+              <NavigationBar />
+              <CaseStudyPageIhub />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/case-studies/j-mave"
+          element={
+            <>
+              <NavigationBar />
+              <CaseStudyPageJmave />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/case-studies/fitmd"
+          element={
+            <>
+              <NavigationBar />
+              <CaseStudyPageFitmd />
+              <Footer />
+            </>
+          }
+        />
       </Routes>
     </>
   );

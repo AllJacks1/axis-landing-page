@@ -18,8 +18,26 @@ import CaseStudyPageIhub from "./components/CaseStudiesIhub";
 import CaseStudyPageJmave from "./components/CaseStudyJMave";
 import CaseStudiesHub from "./components/CaseStudies";
 import CaseStudyPageFitmd from "./components/CaseStudiesFitmd";
+import { useEffect } from "react";
 
 export default function App() {
+  useEffect(() => {
+    if (window.location.hash) {
+      const sectionId = window.location.hash.replace("#", "");
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const offset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -75,7 +93,16 @@ export default function App() {
             </>
           }
         />
-        <Route path="/works" element={<Works />} />
+        <Route
+          path="/works"
+          element={
+            <>
+              <NavigationBar />
+              <Works />
+              <Footer />
+            </>
+          }
+        />
         <Route
           path="/case-studies"
           element={
